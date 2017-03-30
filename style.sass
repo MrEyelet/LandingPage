@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Open+Sans+Condensed:300,700&subset=latin-ext')
+
+$fontHeaders:	'Open Sans Condensed', sans-serif
+$fontText:		'Lato', sans-serif
+
+$white:		#fff
+$black:		#000
+$color1:	#E6B531
+$color2:	#827A66
+$color3:	#B5AC72
+
+//@EXTEND START
+.background-position
+	background-position: top
+	background-size: cover
+	overflow: hidden
+.headingEdit
+	text-align: center
+	font-weight: 300
+	letter-spacing: 2px
+.pulse 
+	-webkit-animation: pulse 1s linear infinite
+	animation: pulse 1s linear infinite
+
+	@keyframes pulse
+		0%
+			-webkit-transform: scale(1.1)
+			-ms-transform: scale(1.1)
+			transform: scale(1.1)
+		50%
+			-webkit-transform: scale(1.0)
+			-ms-transform: scale(1.0)
+			transform: scale(1.0)
+		100% 
+			-webkit-transform: scale(1.1)
+			-ms-transform: scale(1.1)
+			transform: scale(1.1)
+
+//@EXTEND END
+
+//GENERAL STYLES
+html
+	box-sizing: border-box
+*, 
+*:before,
+*:after
+	box-sizing: inherit
+
+body
+	margin: 0
+	padding: 0
+	font-family: $fontText
+
+/*START GRID*/
+.container
+	width: 100%
+	max-width: 1200px
+	margin: 0 auto
+
+.container-fluid
+	width: 100%
+	margin: 0 auto
+
+.clearfix::before,
+.clearfix::after
+	content: " "
+	display: table
+	clear: both
+
+[class*="col-"]
+	float: left
+	min-height: 1px
+	padding: 12px
+
+.col-1
+	width: 8.33%
+.col-2
+	width: 16.66%
+.col-3
+	width: 25%
+.col-4
+	width: 33.33%
+.col-5
+	width: 41.66%
+.col-6
+	width: 50%
+.col-7
+	width: 58.33%
+.col-8
+	width: 66.66%
+.col-9
+	width: 75%
+.col-10
+	width: 83.33%
+.col-11
+	width: 91.66%
+.col-12
+	width: 100%
+
+.col-offset-0 
+	margin-left: 0
+.col-offset-1 
+	margin-left: 8.33%
+.col-offset-2 
+	margin-left: 16.66%
+.col-offset-3 
+	margin-left: 25%
+.col-offset-4 
+	margin-left: 33.33%
+.col-offset-5 
+	margin-left: 41.66%
+.col-offset-6 
+	margin-left: 50%
+.col-offset-7 
+	margin-left: 58.33%
+.col-offset-8 
+	margin-left: 66.66%
+.col-offset-9 
+	margin-left: 75%
+.col-offset-10 
+	margin-left: 83.33%
+.col-offset-11 
+	margin-left: 91.66%
+/*END OF GRID*/
+
+header
+	background: $color1
+	@extend .background-position
+	height: 100vh
+	min-height: 550px
+	position: relative
+	color: $black
+	h1,
+		margin-top: 80px
+		@extend .headingEdit
+		font-size: 46px
+		letter-spacing: 2px
+		font-family: $fontHeaders
+	h2,
+		text-align: center
+		font-size: 30px
+		font-family: $fontHeaders
+		font-weight: 300
+		letter-spacing: 2px
+	img,
+		border-radius: 50%
+		margin: 0 auto
+		display: block
+	.arrow
+		width: 55px
+		height: 53px
+		border: 2px solid #000
+		border-radius: 50%
+		position: absolute
+		bottom: 25px
+		left: 50%
+		transform: translateX(-50%)
+		transition: .5s
+		text-align: center
+		.fa 
+			transition: .5s
+			color: $black
+			font-weight: 100
+		/* PULSE */
+		.fa-pulse
+			@extend .pulse
+	
+nav
+	background: $color2
+	height: 50px
+	margin-bottom: 50px
+	border-bottom: 1px solid $color1
+	ul
+		margin: 0
+		padding: 0
+		list-style-type: none
+		font-size: 0
+		text-align: center
+		li 
+			display: inline-block
+			line-height: 50px
+			a 
+				text-decoration: none
+				color: $white
+				display: block
+				padding: 0 20px
+				font-size: 20px
+				letter-spacing: 2px
+				transition: .5s
+
+//class for java script START
+.sticky
+	width: 100%
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 100
+//END
+.o-mnie
+	.col-12
+		float: none
+		width: 60%
+		margin: 0 auto
+		text-align: center
+		min-height: 550px
+		position: relative
+		overflow: hidden
+		h1
+			font-size: 40px
+			padding: 0 60px
+			background: $white
+			font-family: $fontHeaders
+			@extend .headingEdit
+			position: absolute
+			top: -20px
+			left: 50%
+			transform: translate(-50%)
+		p 
+			font-size: 30px
+			letter-spacing: 2px
+			line-height: 40px
+			font-weight: 300
+			border: 1px solid #000
+			padding: 80px 20px
+	
+.skills
+	background-image: url('img/lecture.jpeg')
+	min-height: 750px
+	@extend .background-position
+	background-attachment: fixed
+	overflow: hidden
+	color: $white
+	padding-bottom: 148px
+	.col-3
+		background: rgba(0, 0, 0, 0.6)
+		border: 1px solid rgba(255, 255, 255, .3)
+		height: 350px
+		img
+			display: block
+			margin: 0 auto
+
+	h1,
+		font-family: $fontHeaders
+		text-align: center
+		font-size: 40px
+		margin-bottom: 0
+		@extend .headingEdit
+	p 
+		text-align: center
+		font-family: $fontText
+		letter-spacing: 2px
+		margin-bottom: 25px
+	
+.portfolio
+	background: $color3
+	color: $white
+	h1
+		font-family: $fontHeaders
+		text-align: center
+		font-size: 40px
+		@extend .headingEdit
+		
+	.col-4
+		&:nth-of-type(6)
+			margin-bottom: 50px
+	.picture
+		height: 218px
+		position: relative
+		border: 2px solid $color1
+	.one 
+		background-image: url('img/screen/pic1_small.jpg')
+		@extend .background-position
+	.two 
+		background-image: url('img/screen/pic2_small.jpg')
+		@extend .background-position
+	.three
+		background-image: url('img/screen/pic3_small.jpg')
+		@extend .background-position
+	.four
+		background-image: url('img/screen/pic4_small.jpg')
+		@extend .background-position
+	.five
+		background-image: url('img/screen/pic5_small.jpg')
+		@extend .background-position
+	.six
+		background-image: url('img/screen/pic6_small.jpg')
+		@extend .background-position
+	.fa 
+		color: $white
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		line-height: 130px
+		opacity: 0
+		transition: .5s
+			
+.layer
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	transition: .5s
+	a
+		display: block
+		width: 100%
+		height: 100%
+
+	p 
+		opacity: 0
+		text-align: center
+		letter-spacing: 2px
+		transition: .5s
+		padding: 10px
+
+
+button
+	display: block
+	margin: 0 auto 80px
+	width: 250px
+	box-shadow: none
+	padding: 15px 30px
+	border: 3px solid $color1
+	text-transform: uppercase
+	font-size: 18px
+	font-weight: bold
+	background: $color1
+	color: $black
+
+	
+.contact
+	text-align: center
+	background: #827A66
+	color: $white
+	.fa
+		padding: 0 15px
+		padding-bottom: 15px
+		color: $color1
+		transition: .2s
+		&:hover
+			cursor: pointer
+			transform: scale(1.1,1.1)
+	.col-12
+		float: none
+		width: 60%
+		margin: 0 auto
+		text-align: center
+		position: relative
+		overflow: hidden
+		margin-top: 50px
+		h1
+			font-size: 40px
+			padding: 0 80px
+			background: #827A66
+			font-family: $fontHeaders
+			font-weight: 300
+			position: absolute
+			top: -15px
+			left: 50%
+			transform: translate(-50%)
+			letter-spacing: 2px
+		p 
+			font-size: 30px
+			letter-spacing: 2px
+			line-height: 40px
+			font-weight: 300
+			border: 1px solid #fff
+			padding: 80px 20px
+	.low-footer
+		background: $black
+		p 
+			color: $color1
+			padding: 5px 0
+			letter-spacing: 2px
+
+
+/*MEDIA QUERIES*/
+
+@media(min-width: 768px)
+	.hamburger-menu,
+	.icon-close
+		display: none
+
+	ul
+		li
+			a
+				&:hover
+					color: $color1
+	.arrow
+		&:hover
+			border-color: $white
+		&:hover .fa
+			color: $white
+			cursor: pointer
+	.portfolio
+		.layer
+			&:hover
+				background: rgba(0, 0, 0, .7)
+			&:hover .fa
+				opacity: 1
+				&:hover
+					color: $color1
+			&:hover p
+				opacity: 1
+		button
+			&:hover
+				cursor: pointer
+				opacity: .8
+			&:active
+				transform: scale(0.95,0.95)
+
+@media(max-width: 767px)
+	.col-m-1 
+		width: 8.33%
+	.col-m-2 
+		width: 16.66%
+	.col-m-3 
+		width: 25%
+	.col-m-4 
+		width: 33.33%
+	.col-m-5 
+		width: 41.66%
+	.col-m-6 
+		width: 50%
+	.col-m-7 
+		width: 58.33%
+	.col-m-8 
+		width: 66.66%
+	.col-m-9 
+		width: 75%
+	.col-m-10 
+		width: 83.33%
+	.col-m-11 
+		width: 91.66%
+	.col-m-12 
+		width: 100%
+
+	nav
+		height: auto
+		text-align: center
+		ul
+			width: 100%
+			li 
+				display: none
+				width: 100%
+	.o-mnie
+		.col-12
+			width: 100%
+	.portfolio
+		.layer
+			background: rgba(0, 0, 0, 0.5)
+			p 
+				opacity: 1
+		.fa
+			opacity: 1
+	.contact
+		.col-12
+			width: 100%
+
+	.hamburger-menu
+		padding: 5px
+		color: $white
+	.icon-close
+		display: none
+		padding: 5px
+		color: $white
+
+@media(max-width: 480px)
+
+	.col-s-1 
+		width: 8.33%
+	.col-s-2 
+		width: 16.66%
+	.col-s-3 
+		width: 25%
+	.col-s-4 
+		width: 33.33%
+	.col-s-5 
+		width: 41.66%
+	.col-s-6 
+		width: 50%
+	.col-s-7 
+		width: 58.33%
+	.col-s-8 
+		width: 66.66%
+	.col-s-9 
+		width: 75%
+	.col-s-10 
+		width: 83.33%
+	.col-s-11 
+		width: 91.66%
+	.col-s-12 
+		width: 100%
+
+	.o-mnie
+		.col-12
+			h1
+				padding: 0 20px
+				top: -35px
+			p 
+				font-size: 17px
+
+	.contact
+		.col-12
+			h1
+				padding: 0 20px
+				top: -30px
+			span, p
+				font-size: 14px
+		.low-footer
+			font-size: 12px
