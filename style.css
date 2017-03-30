@@ -10,17 +10,17 @@
   letter-spacing: 2px; }
 
 .pulse, header .arrow .fa-pulse {
-  -webkit-animation: pulse 1s linear infinite;
-  animation: pulse 1s linear infinite; }
+  -webkit-animation: pulse 2s linear infinite;
+  animation: pulse 2s linear infinite; }
 @keyframes pulse {
   0% {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1); }
   50% {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1); }
+    -webkit-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    transform: scale(0.6); }
   100% {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
