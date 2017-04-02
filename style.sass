@@ -5,9 +5,9 @@ $fontText:		'Lato', sans-serif
 
 $white:		#fff
 $black:		#000
-$color1:	#E6B531
-$color2:	#827A66
-$color3:	#B5AC72
+$color1:	#f2b632
+$color2:	#252839
+$color3:	#677077
 
 //@EXTEND START
 .background-position
@@ -50,6 +50,8 @@ body
 	margin: 0
 	padding: 0
 	font-family: $fontText
+section
+	padding: 50px 0
 
 /*START GRID*/
 .container
@@ -127,11 +129,11 @@ header
 	background: $color1
 	@extend .background-position
 	height: 100vh
-	min-height: 550px
+	min-height: 700px
 	position: relative
 	color: $black
 	h1,
-		margin-top: 80px
+		margin-top: 120px
 		@extend .headingEdit
 		font-size: 46px
 		letter-spacing: 2px
@@ -152,7 +154,7 @@ header
 		border: 2px solid #000
 		border-radius: 50%
 		position: absolute
-		bottom: 25px
+		bottom: 65px
 		left: 50%
 		transform: translateX(-50%)
 		transition: .5s
@@ -181,10 +183,11 @@ nav
 			line-height: 50px
 			a 
 				text-decoration: none
+				font-family: $fontHeaders
 				color: $white
 				display: block
 				padding: 0 20px
-				font-size: 20px
+				font-size: 30px
 				letter-spacing: 2px
 				transition: .5s
 
@@ -225,34 +228,43 @@ nav
 	
 .skills
 	background-image: url('img/lecture.jpeg')
-	min-height: 750px
+	min-height: 850px
 	@extend .background-position
 	background-attachment: fixed
 	overflow: hidden
 	color: $white
 	padding-bottom: 148px
-	.col-3
-		background: rgba(0, 0, 0, 0.6)
-		border: 1px solid rgba(255, 255, 255, .3)
-		height: 350px
-		img
-			display: block
-			margin: 0 auto
+	position: relative
+	.dark-layer
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: rgba(0, 0, 0, 0.8)
+		.col-3
+			height: 350px
+			padding: 25px
+			img
+				display: block
+				margin: 0 auto
 
 	h1,
 		font-family: $fontHeaders
 		text-align: center
 		font-size: 40px
-		margin-bottom: 0
+		margin: 0
+		padding-top: 50px
 		@extend .headingEdit
 	p 
 		text-align: center
 		font-family: $fontText
 		letter-spacing: 2px
 		margin-bottom: 25px
+		margin-bottom: 30px
 	
 .portfolio
-	background: $color3
+	background: $color2
 	color: $white
 	h1
 		font-family: $fontHeaders
@@ -266,7 +278,7 @@ nav
 	.picture
 		height: 218px
 		position: relative
-		border: 2px solid $color1
+		border: 1px solid $color1
 	.one 
 		background-image: url('img/screen/pic1_small.jpg')
 		@extend .background-position
@@ -293,6 +305,8 @@ nav
 		line-height: 130px
 		opacity: 0
 		transition: .5s
+	a 
+		text-decoration: none
 			
 .layer
 	position: absolute
@@ -330,8 +344,9 @@ button
 	
 .contact
 	text-align: center
-	background: #827A66
+	background: $color3
 	color: $white
+	padding: 50px 0 0
 	.fa
 		padding: 0 15px
 		padding-bottom: 15px
@@ -351,7 +366,7 @@ button
 		h1
 			font-size: 40px
 			padding: 0 80px
-			background: #827A66
+			background: $color3
 			font-family: $fontHeaders
 			font-weight: 300
 			position: absolute
@@ -366,6 +381,8 @@ button
 			font-weight: 300
 			border: 1px solid #fff
 			padding: 80px 20px
+		a
+			color: $white
 	.low-footer
 		background: $black
 		p 

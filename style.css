@@ -38,6 +38,9 @@ body {
   padding: 0;
   font-family: "Lato", sans-serif; }
 
+section {
+  padding: 50px 0; }
+
 /*START GRID */
 .container {
   width: 100%;
@@ -133,13 +136,13 @@ body {
 
 /*END OF GRID */
 header {
-  background: #E6B531;
+  background: #f2b632;
   height: 100vh;
-  min-height: 550px;
+  min-height: 700px;
   position: relative;
   color: #000; }
   header h1 {
-    margin-top: 80px;
+    margin-top: 120px;
     font-size: 46px;
     letter-spacing: 2px;
     font-family: "Open Sans Condensed", sans-serif; }
@@ -159,7 +162,7 @@ header {
     border: 2px solid #000;
     border-radius: 50%;
     position: absolute;
-    bottom: 25px;
+    bottom: 65px;
     left: 50%;
     transform: translateX(-50%);
     transition: 0.5s;
@@ -171,10 +174,10 @@ header {
       font-weight: 100; }
 
 nav {
-  background: #827A66;
+  background: #252839;
   height: 50px;
   margin-bottom: 50px;
-  border-bottom: 1px solid #E6B531; }
+  border-bottom: 1px solid #f2b632; }
   nav ul {
     margin: 0;
     padding: 0;
@@ -186,10 +189,11 @@ nav {
       line-height: 50px; }
       nav ul li a {
         text-decoration: none;
+        font-family: "Open Sans Condensed", sans-serif;
         color: #fff;
         display: block;
         padding: 0 20px;
-        font-size: 20px;
+        font-size: 30px;
         letter-spacing: 2px;
         transition: 0.5s; }
 
@@ -227,31 +231,40 @@ nav {
 
 .skills {
   background-image: url("img/lecture.jpeg");
-  min-height: 750px;
+  min-height: 850px;
   background-attachment: fixed;
   overflow: hidden;
   color: #fff;
-  padding-bottom: 148px; }
-  .skills .col-3 {
-    background: rgba(0, 0, 0, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    height: 350px; }
-    .skills .col-3 img {
-      display: block;
-      margin: 0 auto; }
+  padding-bottom: 148px;
+  position: relative; }
+  .skills .dark-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); }
+    .skills .dark-layer .col-3 {
+      height: 350px;
+      padding: 25px; }
+      .skills .dark-layer .col-3 img {
+        display: block;
+        margin: 0 auto; }
   .skills h1 {
     font-family: "Open Sans Condensed", sans-serif;
     text-align: center;
     font-size: 40px;
-    margin-bottom: 0; }
+    margin: 0;
+    padding-top: 50px; }
   .skills p {
     text-align: center;
     font-family: "Lato", sans-serif;
     letter-spacing: 2px;
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    margin-bottom: 30px; }
 
 .portfolio {
-  background: #B5AC72;
+  background: #252839;
   color: #fff; }
   .portfolio h1 {
     font-family: "Open Sans Condensed", sans-serif;
@@ -262,7 +275,7 @@ nav {
   .portfolio .picture {
     height: 218px;
     position: relative;
-    border: 2px solid #E6B531; }
+    border: 1px solid #f2b632; }
   .portfolio .one {
     background-image: url("img/screen/pic1_small.jpg"); }
   .portfolio .two {
@@ -283,6 +296,8 @@ nav {
     line-height: 130px;
     opacity: 0;
     transition: 0.5s; }
+  .portfolio a {
+    text-decoration: none; }
 
 .layer {
   position: absolute;
@@ -308,21 +323,22 @@ button {
   width: 250px;
   box-shadow: none;
   padding: 15px 30px;
-  border: 3px solid #E6B531;
+  border: 3px solid #f2b632;
   text-transform: uppercase;
   font-size: 18px;
   font-weight: bold;
-  background: #E6B531;
+  background: #f2b632;
   color: #000; }
 
 .contact {
   text-align: center;
-  background: #827A66;
-  color: #fff; }
+  background: #677077;
+  color: #fff;
+  padding: 50px 0 0; }
   .contact .fa {
     padding: 0 15px;
     padding-bottom: 15px;
-    color: #E6B531;
+    color: #f2b632;
     transition: 0.2s; }
     .contact .fa:hover {
       cursor: pointer;
@@ -338,7 +354,7 @@ button {
     .contact .col-12 h1 {
       font-size: 40px;
       padding: 0 80px;
-      background: #827A66;
+      background: #677077;
       font-family: "Open Sans Condensed", sans-serif;
       font-weight: 300;
       position: absolute;
@@ -353,10 +369,12 @@ button {
       font-weight: 300;
       border: 1px solid #fff;
       padding: 80px 20px; }
+    .contact .col-12 a {
+      color: #fff; }
   .contact .low-footer {
     background: #000; }
     .contact .low-footer p {
-      color: #E6B531;
+      color: #f2b632;
       padding: 5px 0;
       letter-spacing: 2px; }
 
@@ -367,7 +385,7 @@ button {
     display: none; }
 
   ul li a:hover {
-    color: #E6B531; }
+    color: #f2b632; }
 
   .arrow:hover {
     border-color: #fff; }
@@ -380,7 +398,7 @@ button {
   .portfolio .layer:hover .fa {
     opacity: 1; }
     .portfolio .layer:hover .fa:hover {
-      color: #E6B531; }
+      color: #f2b632; }
   .portfolio .layer:hover p {
     opacity: 1; }
   .portfolio button:hover {
