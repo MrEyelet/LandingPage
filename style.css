@@ -274,8 +274,7 @@ nav {
     margin-bottom: 50px; }
   .portfolio .picture {
     height: 218px;
-    position: relative;
-    border: 1px solid #f2b632; }
+    position: relative; }
   .portfolio .one {
     background-image: url("img/screen/pic1_small.jpg"); }
   .portfolio .two {
