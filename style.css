@@ -329,6 +329,8 @@ button {
   font-weight: bold;
   background: #f2b632;
   color: #000; }
+  button a {
+    color: #000; }
 
 .contact {
   text-align: center;
