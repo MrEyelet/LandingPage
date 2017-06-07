@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Open+Sans+Condensed:300,700&subset=latin-ext");
-.background-position, header, .skills, .portfolio .one, .portfolio .two, .portfolio .three, .portfolio .four, .portfolio .five, .portfolio .six {
+.background-position, header, .skills, .portfolio .one, .portfolio .two, .portfolio .three, .portfolio .four, .portfolio .five, .portfolio .six, .portfolio .seven {
   background-position: top;
   background-size: cover;
   overflow: hidden; }
@@ -268,7 +268,7 @@ nav {
     font-family: "Open Sans Condensed", sans-serif;
     text-align: center;
     font-size: 40px; }
-  .portfolio .col-4:nth-of-type(6) {
+  .portfolio .col-3 {
     margin-bottom: 50px; }
   .portfolio .picture {
     height: 218px;
@@ -285,6 +285,8 @@ nav {
     background-image: url("img/screen/pic5_small.jpg"); }
   .portfolio .six {
     background-image: url("img/screen/pic6_small.jpg"); }
+  .portfolio .seven {
+    background-image: url("img/screen/pic7_small.jpg"); }
   .portfolio .fa {
     color: #fff;
     position: absolute;
@@ -328,7 +330,7 @@ button {
   button a {
     color: #000;
     display: block;
-    padding: 15px 0; }
+    padding: 15px; }
 
 .contact {
   text-align: center;
@@ -363,7 +365,7 @@ button {
       transform: translate(-50%);
       letter-spacing: 2px; }
     .contact .col-12 p {
-      font-size: 30px;
+      font-size: 25px;
       letter-spacing: 2px;
       line-height: 40px;
       font-weight: 300;
